@@ -14,9 +14,9 @@
     <script>
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(json => displayUsers(json))
+        .then(data => displayUsers(data))
 
-        function displayUsers (users){  //json -> users
+        function displayUsers (users){  //data -> users
             const userNames = users.map (data => data.username);
             const ul =document.getElementById('user-container');
             for (let i= 0 ; i< userNames.length; i++){
